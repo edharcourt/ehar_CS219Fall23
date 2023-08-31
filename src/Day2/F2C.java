@@ -1,5 +1,7 @@
 package Day2;
 
+import Util.*;
+
 import java.util.Scanner;
 
 public class F2C {
@@ -10,7 +12,7 @@ public class F2C {
 
         System.out.println("Enter a temp in Fahrenheit: ");
         double f = kbd.nextDouble();
-        System.out.println(5/9.0*(f-32));
+        System.out.println(Util.f2c(f));
     }
 
 }
