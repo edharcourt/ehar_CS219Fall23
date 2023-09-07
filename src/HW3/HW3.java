@@ -104,10 +104,14 @@ public class HW3 {
     public static void main(String[] args) {
         // write some tests for your functions
         System.out.println(!cigarParty(30,false));
-        // finish cigar party tests
+        System.out.println(!cigarParty(50,true));
+        System.out.println(!cigarParty(70,true));
+
 
         System.out.println(caughtSpeeding(60, false) == 0);
-        // finish caughtSpeeding tests
+        System.out.println(caughtSpeeding(65, false) == 1);
+        System.out.println(caughtSpeeding(65, true) == 0);
+
 
         // write ordered tests
         System.out.println(ordered(1,2,3));
@@ -115,12 +119,36 @@ public class HW3 {
         System.out.println(!ordered(9,1,8));
 
         // write love6 tests
+        System.out.println(love6(6,4));
+        System.out.println(!love6(4,5));
+        System.out.println(love6(1,5));
+        System.out.println(love6(1,6));
+        System.out.println(love6(1,7));
+        System.out.println(!love6(7,5));
+        System.out.println(love6(8,2));
 
         // write redTicket tests
+        System.out.println(redTicket(2, 2, 2) == 10);
+        System.out.println(redTicket(2, 2, 1) == 0);
+        System.out.println(redTicket(0, 0, 0) == 5);
+        System.out.println(redTicket(2, 0, 0) == 1);
+        System.out.println(redTicket(1, 1, 1) == 5);
 
         // blueTicket tests
+        System.out.println(blueTicket(9, 1, 0) == 10);
+        System.out.println(blueTicket(9, 2, 0) == 0);
+        System.out.println(blueTicket(6, 1, 4) == 10);
+        System.out.println(blueTicket(6, 1, 5) == 0);
+        System.out.println(blueTicket(10, 0, 0) == 10);
 
         // common digit tests
+        System.out.println(commonDigit(12, 23));
+        System.out.println(!commonDigit(12, 43));
+        System.out.println(!commonDigit(12, 44));
+        System.out.println(commonDigit(23, 12));
+        System.out.println(commonDigit(23, 29));
+        System.out.println(!commonDigit(21, 91));
+
     }
 
 }  // class LogicExercises
