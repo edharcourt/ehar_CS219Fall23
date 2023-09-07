@@ -93,9 +93,9 @@ public class HW3 {
      * the right digit.
      *
      *
-     *  shareDigit(12, 23) → true
-     *  shareDigit(12, 43) → false
-     *  shareDigit(12, 44) → false
+     *  commonDigit(12, 23) → true
+     *  commonDigit(12, 43) → false
+     *  commonDigit(12, 44) → false
      */
     public static boolean commonDigit(int x, int y) {
         return false;
@@ -113,6 +113,14 @@ public class HW3 {
         System.out.println(ordered(1,2,3));
         System.out.println(ordered(3,2,1));
         System.out.println(!ordered(9,1,8));
+
+        // write love6 tests
+
+        // write redTicket tests
+
+        // blueTicket tests
+
+        // common digit tests
     }
 
 }  // class LogicExercises
