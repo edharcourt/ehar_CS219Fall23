@@ -107,67 +107,68 @@ public class HW3 {
         // All of these tests should print true
 
         // write some tests for cigar party
-        System.out.println(!cigarParty(30,false));
-        System.out.println(cigarParty(50,true));
-        System.out.println(cigarParty(70,true));
-        System.out.println(!cigarParty(30,true));
-        System.out.println(cigarParty(40,false));
-        System.out.println(cigarParty(60,false));
-        System.out.println(!cigarParty(61,false));
+        int i = 0;
+        System.out.printf("%d: %b\n", i++, !cigarParty(30,false));
+        System.out.printf("%d: %b\n", i++, cigarParty(50,true));
+        System.out.printf("%d: %b\n", i++, cigarParty(70,true));
+        System.out.printf("%d: %b\n", i++, !cigarParty(30,true));
+        System.out.printf("%d: %b\n", i++, cigarParty(40,false));
+        System.out.printf("%d: %b\n", i++, cigarParty(60,false));
+        System.out.printf("%d: %b\n", i++, !cigarParty(61,false));
 
 
-        System.out.println(caughtSpeeding(60, false) == 0);
-        System.out.println(caughtSpeeding(65, false) == 1);
-        System.out.println(caughtSpeeding(65, true) == 0);
-        System.out.println(caughtSpeeding(80, false) == 1);
-        System.out.println(caughtSpeeding(85, false) == 2);
-        System.out.println(caughtSpeeding(85, true) == 1);
-        System.out.println(caughtSpeeding(70, false) == 1);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(60, false) == 0);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(65, false) == 1);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(65, true) == 0);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(80, false) == 1);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(85, false) == 2);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(85, true) == 1);
+        System.out.printf("%d: %b\n", i++, caughtSpeeding(70, false) == 1);
 
 
         // write ordered tests
-        System.out.println(ordered(1,2,3));
-        System.out.println(ordered(3,2,1));
-        System.out.println(!ordered(9,1,8));
-        System.out.println(ordered(1,1,1));
-        System.out.println(ordered(1,1,2));
-        System.out.println(ordered(1,2,2));
-        System.out.println(ordered(2,2,1));
-        System.out.println(ordered(2,1,1));
+        System.out.printf("%d: %b\n", i++, ordered(1,2,3));
+        System.out.printf("%d: %b\n", i++, ordered(3,2,1));
+        System.out.printf("%d: %b\n", i++, !ordered(9,1,8));
+        System.out.printf("%d: %b\n", i++, ordered(1,1,1));
+        System.out.printf("%d: %b\n", i++, ordered(1,1,2));
+        System.out.printf("%d: %b\n", i++, ordered(1,2,2));
+        System.out.printf("%d: %b\n", i++, ordered(2,2,1));
+        System.out.printf("%d: %b\n", i++, ordered(2,1,1));
 
 
         // write love6 tests
-        System.out.println(love6(6,4));
-        System.out.println(!love6(4,5));
-        System.out.println(love6(1,5));
-        System.out.println(love6(1,6));
-        System.out.println(love6(1,7));
-        System.out.println(!love6(7,5));
-        System.out.println(love6(8,2));
+        System.out.printf("%d: %b\n", i++, love6(6,4));
+        System.out.printf("%d: %b\n", i++, !love6(4,5));
+        System.out.printf("%d: %b\n", i++, love6(1,5));
+        System.out.printf("%d: %b\n", i++, love6(1,6));
+        System.out.printf("%d: %b\n", i++, love6(1,7));
+        System.out.printf("%d: %b\n", i++, !love6(7,5));
+        System.out.printf("%d: %b\n", i++, love6(8,2));
 
         // write redTicket tests
-        System.out.println(redTicket(2, 2, 2) == 10);
-        System.out.println(redTicket(2, 2, 1) == 0);
-        System.out.println(redTicket(0, 0, 0) == 5);
-        System.out.println(redTicket(2, 0, 0) == 1);
-        System.out.println(redTicket(1, 1, 1) == 5);
-        System.out.println(redTicket(1, 2, 1) == 0);
-        System.out.println(redTicket(1, 2, 0) == 1);
+        System.out.printf("%d: %b\n", i++, redTicket(2, 2, 2) == 10);
+        System.out.printf("%d: %b\n", i++, redTicket(2, 2, 1) == 0);
+        System.out.printf("%d: %b\n", i++, redTicket(0, 0, 0) == 5);
+        System.out.printf("%d: %b\n", i++, redTicket(2, 0, 0) == 1);
+        System.out.printf("%d: %b\n", i++, redTicket(1, 1, 1) == 5);
+        System.out.printf("%d: %b\n", i++, redTicket(1, 2, 1) == 0);
+        System.out.printf("%d: %b\n", i++, redTicket(1, 2, 0) == 1);
 
         // blueTicket tests
-        System.out.println(blueTicket(9, 1, 0) == 10);
-        System.out.println(blueTicket(9, 2, 0) == 0);
-        System.out.println(blueTicket(6, 1, 4) == 10);
-        System.out.println(blueTicket(6, 1, 5) == 0);
-        System.out.println(blueTicket(10, 0, 0) == 10);
+        System.out.printf("%d: %b\n", i++, blueTicket(9, 1, 0) == 10);
+        System.out.printf("%d: %b\n", i++, blueTicket(9, 2, 0) == 0);
+        System.out.printf("%d: %b\n", i++, blueTicket(6, 1, 4) == 10);
+        System.out.printf("%d: %b\n", i++, blueTicket(6, 1, 5) == 0);
+        System.out.printf("%d: %b\n", i++, blueTicket(10, 0, 0) == 10);
 
         // common digit tests
-        System.out.println(commonDigit(12, 23));
-        System.out.println(!commonDigit(12, 43));
-        System.out.println(!commonDigit(12, 44));
-        System.out.println(commonDigit(23, 12));
-        System.out.println(commonDigit(23, 29));
-        System.out.println(commonDigit(21, 91));
+        System.out.printf("%d: %b\n", i++, commonDigit(12, 23));
+        System.out.printf("%d: %b\n", i++, !commonDigit(12, 43));
+        System.out.printf("%d: %b\n", i++, !commonDigit(12, 44));
+        System.out.printf("%d: %b\n", i++, commonDigit(23, 12));
+        System.out.printf("%d: %b\n", i++, commonDigit(23, 29));
+        System.out.printf("%d: %b\n", i++, commonDigit(21, 91));
 
     }
 
