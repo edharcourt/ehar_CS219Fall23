@@ -104,6 +104,8 @@ public class HW3 {
 
     public static void main(String[] args) {
 
+        // All of these tests should print true
+
         // write some tests for cigar party
         System.out.println(!cigarParty(30,false));
         System.out.println(cigarParty(50,true));
