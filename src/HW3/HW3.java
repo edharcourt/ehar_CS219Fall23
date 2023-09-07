@@ -1,6 +1,6 @@
 package HW3;
 
-// These problems are taken from Nick Parlante's codingbat.com/java.
+// Some of these problems are taken from Nick Parlante's codingbat.com/java.
 
 public class HW3 {
 
@@ -41,10 +41,11 @@ public class HW3 {
 
     /**
      * Return true if d1, d2, d3 are in either ascending or descending order.
-     * Otherwise return false
+     * Otherwise return false. Numbers that are the same are ordered (so 1, 2, 2
+     * would be true).
      */
     public static boolean ordered(int d1, int d2, int d3) {
-        return false; // fill in function body
+        return false;  // fill in function body
     }
 
     /**
@@ -54,7 +55,7 @@ public class HW3 {
      * absolute value of a number.
      */
     public static boolean love6(int a, int b) {
-        return false; // fill in function body
+        return false;
     }
 
     /**
@@ -68,7 +69,7 @@ public class HW3 {
      * redTicket(0, 0, 0) → 5
      */
     public static int redTicket(int a, int b, int c) {
-        return -1; // fill in function result
+            return -1;
     }
 
     /**
@@ -83,7 +84,7 @@ public class HW3 {
      *  blueTicket(6, 1, 4) → 10
      */
     public static int blueTicket(int a, int b, int c) {
-        return -1; // fill in function result
+        return -1;
     }
 
     /**
@@ -102,21 +103,36 @@ public class HW3 {
     }
 
     public static void main(String[] args) {
-        // write some tests for your functions
+
+        // write some tests for cigar party
         System.out.println(!cigarParty(30,false));
-        System.out.println(!cigarParty(50,true));
-        System.out.println(!cigarParty(70,true));
+        System.out.println(cigarParty(50,true));
+        System.out.println(cigarParty(70,true));
+        System.out.println(!cigarParty(30,true));
+        System.out.println(cigarParty(40,false));
+        System.out.println(cigarParty(60,false));
+        System.out.println(!cigarParty(61,false));
 
 
         System.out.println(caughtSpeeding(60, false) == 0);
         System.out.println(caughtSpeeding(65, false) == 1);
         System.out.println(caughtSpeeding(65, true) == 0);
+        System.out.println(caughtSpeeding(80, false) == 1);
+        System.out.println(caughtSpeeding(85, false) == 2);
+        System.out.println(caughtSpeeding(85, true) == 1);
+        System.out.println(caughtSpeeding(70, false) == 1);
 
 
         // write ordered tests
         System.out.println(ordered(1,2,3));
         System.out.println(ordered(3,2,1));
         System.out.println(!ordered(9,1,8));
+        System.out.println(ordered(1,1,1));
+        System.out.println(ordered(1,1,2));
+        System.out.println(ordered(1,2,2));
+        System.out.println(ordered(2,2,1));
+        System.out.println(ordered(2,1,1));
+
 
         // write love6 tests
         System.out.println(love6(6,4));
@@ -133,6 +149,8 @@ public class HW3 {
         System.out.println(redTicket(0, 0, 0) == 5);
         System.out.println(redTicket(2, 0, 0) == 1);
         System.out.println(redTicket(1, 1, 1) == 5);
+        System.out.println(redTicket(1, 2, 1) == 0);
+        System.out.println(redTicket(1, 2, 0) == 1);
 
         // blueTicket tests
         System.out.println(blueTicket(9, 1, 0) == 10);
@@ -147,7 +165,7 @@ public class HW3 {
         System.out.println(!commonDigit(12, 44));
         System.out.println(commonDigit(23, 12));
         System.out.println(commonDigit(23, 29));
-        System.out.println(!commonDigit(21, 91));
+        System.out.println(commonDigit(21, 91));
 
     }
 
