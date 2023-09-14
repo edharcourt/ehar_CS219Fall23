@@ -2,6 +2,8 @@ package HW4;
 
 public class HW4 {
 
+
+
     /*
      * count7s  returns the number of times the digit 7 appears in
      * the parameter n.
