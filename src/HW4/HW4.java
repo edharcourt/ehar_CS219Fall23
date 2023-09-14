@@ -18,9 +18,6 @@ public class HW4 {
      *           remove it?
      */
     public static long factor(long n) {
-        for (int i = 2; i <= Math.sqrt(n); i++)
-            if (n % i == 0)
-                return i;
         return -1;
     }
 
@@ -42,11 +39,7 @@ public class HW4 {
      *   perfect(99) == false
      */
     public static boolean perfect(int n) {
-        int sum = 0;
-        for (int i = 1; i <= n/2; i++)
-            if (n % i == 0)
-                sum = sum + i;
-        return sum == n;
+        return false;
     }
 
     /*
@@ -57,27 +50,26 @@ public class HW4 {
      *
      * The word kayak is not double_trouble because it has only one 'y'.
      */
-    public static boolean double_trouble(String s) {
-        return false;   // shut up error message
+    public static boolean double_trouble(String word) {
+        return false;
     }
 
     /*
      * Thoroughly test all of your functions above.
      */
     public static void main(String[] args) {
+        int i = 0;
+        System.out.printf("%d: %b\n", i++, factor(25) == 5);
+        System.out.printf("%d: %b\n", i++, factor(59953793) == 7727);
+        System.out.printf("%d: %b\n", i++, factor(1531482031) == -1);
 
-        System.out.println(factor(25) == 5);
-        System.out.println(factor(59953793) == 7727);
-        System.out.println(factor(1531482031) == -1);
+        System.out.printf("%d: %b\n", i++, perfect(28));
+        System.out.printf("%d: %b\n", i++, perfect(496));
+        System.out.printf("%d: %b\n", i++, !perfect(99));
 
-        System.out.println(perfect(28));
-        System.out.println(perfect(496));
-        System.out.println(!perfect(99));
-
-        System.out.println(double_trouble("Abba"));
-        System.out.println(double_trouble("appeases"));
-        System.out.println(double_trouble("esophagographers"));
-        System.out.println(!double_trouble("kayak"));
-
-    }
-}
+        System.out.printf("%d: %b\n", i++, double_trouble("Abba"));
+        System.out.printf("%d: %b\n", i++, double_trouble("appeases"));
+        System.out.printf("%d: %b\n", i++, double_trouble("esophagographers"));
+        System.out.printf("%d: %b\n", i++, !double_trouble("kayak"));
+    } // main
+} // class HW4
