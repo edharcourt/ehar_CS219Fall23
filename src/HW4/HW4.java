@@ -2,41 +2,11 @@ package HW4;
 
 public class HW4 {
 
-
-
-    /*
-     * count7s  returns the number of times the digit 7 appears in
-     * the parameter n.
-     *
-     * count7s(1727337) = 3
-     * count7s(1234) = 0
-     * count7s(777777) = 6
-     *
-     * Question: Does the function work if n is negative?
-     */
-    public static int count7s(int n) {
-        return -1;
-    }
-
-    /*
-     *  If we list all the natural numbers below 10 that are multiples
-     *  of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples
-     *  is 23. Find the sum of all the multiples of 3 or 5 below 1000.
-     *
-     *  https://projecteuler.net/problem=1
-     *
-     *  n should be non-negative
-     *  sum3or5(10) = 23
-     *  sum3or5(1000) = 233168
-     */
-    public static int sum3or5(int n) {
-        return -1;
-    }
-
     /*
      * Return the first factor of n greater than 1
-     * and less than n. If no factors return -1.
+     * and less than n. If no factors are found return -1.
      * Notice that this function uses longs and not ints.
+     * We will talk about this in class.
      *
      *  factor(25) = 5
      *  factor(59953793) == 7727
@@ -48,91 +18,10 @@ public class HW4 {
      *           remove it?
      */
     public static long factor(long n) {
+        for (int i = 2; i <= Math.sqrt(n); i++)
+            if (n % i == 0)
+                return i;
         return -1;
-    }
-
-    /*
-     * Write a function stars(n) that will print n asterisks
-     * on the console window.
-     *
-     * stars(5) will print *****
-     *
-     * Question: Why is this a void function?
-     */
-    public static void stars(int n) {
-        // fill in code
-    }
-
-    /*
-     * Write a function triangle that takes an integer n and will print
-     * a right triangle of n rows where the first row has 1 asterisk
-     * and the nth row has n asterisks, For example,
-     *
-     * triangle(5) will print
-     *
-     *         *
-     *         **
-     *         ***
-     *         ****
-     *         *****
-     *
-     *  Hint: use the function stars you defined above.
-     */
-    public static void triangle(int n) {
-        // fill in code
-    }
-
-    /*
-     *  Fizz Buzz
-     *
-     *  Write a function fizzbuzz that takes an integer n and
-     *  prints out the integers from 1 to n. If the number is
-     *  divisible by 3 print "fizz" instead of the number. If
-     *  the number is divisible by 5 then print "buzz" instead
-     *  of the number. And if it is divisible by 3 and 5 it prints
-     *  "fizz buzz".
-     *
-     *  For example, calling fizzbuzz(16) would print
-     *  1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizz buzz 16
-     *
-     *  Instead of commas you can print each entry on its own line.
-     *
-     *  https://en.wikipedia.org/wiki/Fizz_buzz
-     *
-     */
-    public static void fizzbuzz(int n) {
-        // fill in code
-    }
-
-    /*
-     * A palindrome number is an integer n that, when you reverse the digits,
-     * gives you n back. For example 121, 11, 2, 1221, 12321, 123321 are
-     * all palindrome numbers.  The integer 1234 is not a palindrome integer.
-     *
-     * Write a boolean function isPalindrome that returns true of the integer
-     * n passed to it is a palindrome integer, otherwise it returns false.
-     *
-     */
-    public static boolean isPalindrome(int n) {
-        return false;
-    }
-
-    /*
-     * This function is similar to the triangle function; but a little trickier.
-     *
-     * Write a function named staircase that takes an integer n, and produces the triangle
-     * pattern below. For example calling staircase(5) would print
-     *
-     *        *
-     *       **
-     *      ***
-     *     ****
-     *    *****
-     *
-     * In general, there are n rows of asterisks where the last row has n asterisks.
-     */
-    public static void staircase(int n) {
-        // fill in code here
     }
 
     /*
@@ -153,19 +42,23 @@ public class HW4 {
      *   perfect(99) == false
      */
     public static boolean perfect(int n) {
-        return false;   // shut up error message
+        int sum = 0;
+        for (int i = 1; i <= n/2; i++)
+            if (n % i == 0)
+                sum = sum + i;
+        return sum == n;
     }
 
     /*
-     *   Find perfect numbers
+     * The function double_trouble returns true if each character
+     * in the string s appears exactly twice. For example, "Abba"
+     * has two a's and two b's, so it returns true. "appeases" has
+     * two a's, two p's, two e's, and two s's, so it returns true.
      *
-     *   Write a function findPerfect that searches for more perfect numbers.
-     *   Check numbers all the way up to 2147483647
-     *
-     *   Question: What is special about the number 2147483647?
+     * The word kayak is not double_trouble because it has only one 'y'.
      */
-    public static void findPerfect() {
-        // fill in code here
+    public static boolean double_trouble(String s) {
+        return false;   // shut up error message
     }
 
     /*
@@ -173,14 +66,18 @@ public class HW4 {
      */
     public static void main(String[] args) {
 
-        System.out.println(isPalindrome(1221));
-        System.out.println(!isPalindrome(12345));
+        System.out.println(factor(25) == 5);
+        System.out.println(factor(59953793) == 7727);
+        System.out.println(factor(1531482031) == -1);
 
-        // count7s tests
-        System.out.println(count7s(1234) == 0);
-        System.out.println(count7s(71977) == 3);
-        System.out.println(count7s(-71977) == 3);
-        System.out.println(sum3or5(1000) == 233168);
-        System.out.println(factor(7304692485435694493L) == -1);
+        System.out.println(perfect(28));
+        System.out.println(perfect(496));
+        System.out.println(!perfect(99));
+
+        System.out.println(double_trouble("Abba"));
+        System.out.println(double_trouble("appeases"));
+        System.out.println(double_trouble("esophagographers"));
+        System.out.println(!double_trouble("kayak"));
+
     }
 }
