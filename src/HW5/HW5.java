@@ -35,14 +35,14 @@ public class HW5 {
 
     public static void main(String[] args) {
 
+        // Test removePunctuation
         System.out.println(removePunctuation("Hello, World!!!").equals("Hello World"));
         System.out.println(removePunctuation("Hello World").equals("Hello World"));
         System.out.println(removePunctuation("!@#$%^&*()-_+=").equals(""));
 
+        // Test toLowerCase
         System.out.println(toLowerCase("Hello, World!!!").equals("hello, world!!!"));
         System.out.println(toLowerCase("Hello World").equals("hello world"));
         System.out.println(toLowerCase("!@#$%^&*()-_+=").equals("!@#$%^&*()-_+="));
-
-
     }
 }
