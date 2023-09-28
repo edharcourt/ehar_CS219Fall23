@@ -4,7 +4,7 @@ public class HW5 {
 
     /**
      * Remove punctuation from a string. Punctuation is defined as any character
-     * that is not a letter or a number. The function should return a new string.
+     * that is not a letter or a number or a space. The function should return a new string.
      * For example, if the input string is "Hello, World!!!" the function should
      * return "Hello World".
      * @param s
