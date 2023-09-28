@@ -78,6 +78,5 @@ public class HW4 {
         System.out.println(double_trouble("appeases"));
         System.out.println(double_trouble("esophagographers"));
         System.out.println(!double_trouble("kayak"));
-
     }
 }
