@@ -7,8 +7,14 @@ public class HW5 {
      * that is not a letter or a number or a space. The function should return a new string.
      * For example, if the input string is "Hello, World!!!" the function should
      * return "Hello World".
-     * @param s
-     * @return
+     *
+     * Don't use the built-in functions that start with "is", such as
+     * isLetterOrDigit, or isAlphabetic. Code these yourself. For example,
+     * you can check if a character is a letter by making sure it is
+     * between 'a' and 'z' or 'A' and 'Z'.
+     *
+     * @param s - the string we are removing the punctuation from.
+     * @return - a new string with punctuation removed.
      */
     public static String removePunctuation(String s) {
         return "";
@@ -16,8 +22,8 @@ public class HW5 {
 
     /**
      * Convert a string to lower case. Without using the built-in function
-     * toLowerCase. The function should return a new string.
-     * For example, if the input string is "Hello, World!!!" the function should
+     * toLowerCase. The function should return a new string.  For example,
+     * if the input string is "Hello, World!!!" the function should
      * return "hello, world!!!".
      *
      * @param s - the string being converted to lower case
