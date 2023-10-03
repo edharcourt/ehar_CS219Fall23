@@ -1,5 +1,8 @@
 package Util;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Scanner;
 
 public class Util {
@@ -39,5 +42,22 @@ public class Util {
         } // while
         return c;
     }  // getDouble
+
+    /**
+     *
+     * @param path - Uniform Resource Locator
+     * @return
+     */
+    public static Scanner openSite(String path) {
+        try {
+            URL url = new URL(path);
+            Scanner s = new Scanner(url.openConnection().getInputStream());
+            return s;
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    } // openSite
 
 } // class Util
