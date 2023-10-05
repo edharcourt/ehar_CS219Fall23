@@ -39,6 +39,9 @@ public class SwallowSpeed {
         return sum / i;
     } // average
 
+    // The function average(double [] vec) is overloaded
+    // with the function average(Scanner s)
+
     public static void main(String[] args) {
         Scanner site = Util.openSite(
          "https://scipython.com/static/media/problems/P4.1/swallow-speeds.txt");
@@ -46,6 +49,15 @@ public class SwallowSpeed {
         double [] vec = loadSpeeds(site);
         System.out.println(Arrays.toString(vec));
         //System.out.printf("%.1f\n", average(site));
+        System.out.printf("Mean: %.2f\n", Util.average(vec));
+        System.out.printf("Median: %.2f\n", Util.median(vec));
+
+        // DEBUG median issues with Gunnar and Foster
+        System.out.println(Arrays.toString(vec));
+        System.out.println(vec.length);
+        System.out.println(vec[vec.length / 2]);
+        System.out.println(vec[vec.length / 2 + 1]);
+
     }
 
 }
