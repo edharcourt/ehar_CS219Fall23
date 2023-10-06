@@ -39,11 +39,10 @@ public class HW6 {
      *   Turn string s into an array of characters and return the array.
      */
     public static char [] make_array(String s) {
-        char [] aoc = new char[s.length()];
 
         // fill in code here
 
-        return aoc;
+        return null;
     }
 
     /*
