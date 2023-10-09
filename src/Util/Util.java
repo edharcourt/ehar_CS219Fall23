@@ -3,6 +3,7 @@ package Util;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Util {
@@ -59,5 +60,34 @@ public class Util {
             throw new RuntimeException(e);
         }
     } // openSite
+
+    /**
+     * Compute the mean of the array of doubles vec
+     * @param vec - the array of doubles
+     * @return the mean
+     */
+    public static double average(double [] vec) {
+        double sum = 0;
+
+        // for i in range(len(vec)):
+        for (int i = 0; i < vec.length; i++) {
+            sum = sum + vec[i];
+        }
+
+        return sum/vec.length;
+    }
+
+    public static double median(double [] vec) {
+        Arrays.sort(vec);
+
+        // odd length vector
+        if (vec.length % 2 == 1) {
+            return vec[vec.length/2];
+        }
+
+        // the array has even length
+        return (vec[vec.length/2] + vec[vec.length/2 + 1]) / 2;
+    }
+
 
 } // class Util
