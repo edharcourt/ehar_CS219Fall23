@@ -70,8 +70,10 @@ public class Util {
         double sum = 0;
 
         // for i in range(len(vec)):
-        for (int i = 0; i < vec.length; i++) {
-            sum = sum + vec[i];
+        // for each double v in the array vec
+        // for v in vec:
+        for (double v : vec) {
+            sum = sum + v;
         }
 
         return sum/vec.length;
@@ -89,5 +91,45 @@ public class Util {
         return (vec[vec.length/2] + vec[vec.length/2 + 1]) / 2;
     }
 
+    // exercise 7.1
+
+    /**
+     * Return the index of target in the array a.
+     * @param a - the array
+     * @param target - the integer being searched for
+     * @return -1 if target is not found
+     */
+    public static int indexOf(int[] a, int target) {
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == target) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int indexOf(String [] a, String target) {
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].equals(target)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // Write a function scale that scales each double
+    // in an array of doubles by some factor f
+    // without modifying the array aod.
+    public static double [] scale(double [] aod, double f) {
+        double [] ra = new double[aod.length];
+
+        // allocate a new array or modify aod directly?
+        for (int i = 0; i < aod.length; i++) {
+            ra[i] = aod[i] * f;
+        }
+        return ra;
+    }
 
 } // class Util
