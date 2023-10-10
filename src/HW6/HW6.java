@@ -37,6 +37,7 @@ public class HW6 {
 
     /*
      *   Turn string s into an array of characters and return the array.
+     *   Do not call the function toCharArray() on the string s.
      */
     public static char [] make_array(String s) {
 
