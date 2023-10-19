@@ -20,7 +20,7 @@ public class Chap6Exercises {
 
             // delete the character at position j in tiles
             tiles = tiles.substring(0, j) +
-                    tiles.substring(j+1, tiles.length());
+                    tiles.substring(j+1);
         }
         return true;
     }

@@ -27,6 +27,7 @@ public class Main {
     // return true if there is no repeated digit in x
     // no_repeated_digit(12345) == true
     // no_repreated_digit(123454) == false
+    // no_repeated_digit(11111) == false
     public static boolean no_repeated_digit(int x) {
         // finish for exam study
         return false; // shut up error message
