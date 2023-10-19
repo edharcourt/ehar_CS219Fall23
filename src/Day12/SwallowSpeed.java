@@ -12,7 +12,7 @@ public class SwallowSpeed {
         while (s.hasNextLine()) {
             String line = s.nextLine();
 
-            if (!line.strip().isEmpty()) {
+            if (!line.isBlank()) {
                 if (line.indexOf('#') == -1) {
                     speeds[i] = Double.parseDouble(line);
                     i = i + 1;
@@ -29,7 +29,7 @@ public class SwallowSpeed {
         while (s.hasNextLine()) {
             String line = s.nextLine();
 
-            if (!line.strip().isEmpty()) {
+            if (!line.isBlank()) {
                 if (line.indexOf('#') == -1) {
                     sum = sum + Double.parseDouble(line);
                     i = i + 1;

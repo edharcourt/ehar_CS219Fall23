@@ -65,7 +65,7 @@ public class Banish {
         for(int v : a1b)
             al1.add(v);
         remove(al1, 42);
-        System.out.println(al1.toString());
+        System.out.println(al1);
         ArrayList<Integer> al2 = new ArrayList<>();
         for (int v : a2)
             al2.add(v);
