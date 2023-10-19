@@ -28,6 +28,7 @@ public class Main {
     // no_repeated_digit(12345) == true
     // no_repreated_digit(123454) == false
     public static boolean no_repeated_digit(int x) {
+        // finish for exam study
         return false; // shut up error message
     }
 
