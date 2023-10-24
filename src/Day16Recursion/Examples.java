@@ -52,6 +52,7 @@ public class Examples {
             return reverse(s.substring(1)) + s.charAt(0);
     }
 
+
     public static void main(String[] args) {
         System.out.println(pow(2,3) == 8);
         System.out.println(pow(10,0) == 1);
