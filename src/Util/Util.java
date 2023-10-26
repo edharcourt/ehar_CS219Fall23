@@ -109,6 +109,12 @@ public class Util {
         return -1;
     }
 
+    public static <T> void swap(T [] aot, int i, int j) {
+        T tmp = aot[i];
+        aot[i] = aot[j];
+        aot[j] = tmp;
+    }
+
     public static int indexOf(String [] a, String target) {
 
         for (int i = 0; i < a.length; i++) {
