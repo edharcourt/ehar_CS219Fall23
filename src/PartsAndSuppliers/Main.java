@@ -40,7 +40,7 @@ public class Main {
         while (s.hasNextLine()) {
             String line = s.nextLine();
             String [] pieces = line.split(",");
-            Part p = new Part(Integer.parseInt(pieces[0]),
+            //Part p = new Part(Integer.parseInt(pieces[0]),
                     // name, weight, location, color;
         }
 
