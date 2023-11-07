@@ -41,4 +41,50 @@ public class Part {
         // "this" inside of a class refers to the object
         // to the left of the "." where this method is called.
     }
+
+    public int getPno() {
+        return pno;
+        // leave off this in this.pno because it is unambiguous
+        // which pno we are referring to.
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
