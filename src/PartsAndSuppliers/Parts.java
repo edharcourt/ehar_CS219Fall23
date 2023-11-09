@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Parts {
+public class Parts implements PartsInterface {
 
     private ArrayList<Part> parts;
 
@@ -63,6 +63,47 @@ public class Parts {
             if (p.getName().equalsIgnoreCase(name))
                 parts.add(p);
         return parts;
+    }
+
+    public boolean insert(int pno, String name, double weight,
+                       String location, String color, double price) {
+
+        // make sure pno does not already exist
+        if (findByPno(pno) != null)
+            return false;
+
+        Part p = new Part(pno, name, weight, location, color, price);
+
+        int i = 0;
+
+        // increment i until it is at the correct location
+        while (i < parts.size() && parts.get(i).getPno() < pno)
+            i++;
+
+        parts.add(i, p);
+        return true;
+    }
+
+    @Override
+    public Part delete(int pno) {
+        int i = 0;
+
+        while (i < parts.size() && pno != parts.get(i).getPno())
+            i++;
+
+        if (i == parts.size())
+            return null;
+        else
+            return parts.remove(i);
+    }  // delete
+
+    public Part remove(int pno) {
+        Part p = findByPno(pno);
+        if (p == null)
+            return null;
+
+        parts.remove(p);
+        return p;
     }
 
 } // class Parts
