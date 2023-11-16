@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 import Util.Util;
 
-public class ZipcodeDB implements ZipcodeDBInterface {
+// A class can implement multiple interfaces
+public class ZipcodeDB implements ZipcodeDBInterface,
+                                  WeatherInterface {
 
     private ArrayList<Zipcode> zips;
 
@@ -29,8 +31,7 @@ public class ZipcodeDB implements ZipcodeDBInterface {
     }  // constructor
 
 
-    @Override
-    public Zipcode findByZip(String zip) {
+   public Zipcode findByZip(String zip) {
         for (Zipcode z : this.zips)
             if (z.getZipcode().equals(zip))
                 return z;
@@ -38,8 +39,28 @@ public class ZipcodeDB implements ZipcodeDBInterface {
         return null;
     }
 
-    @Override
     public double getCurrentTemp(Zipcode z) {
-        return 0;
+        // https://api.open-meteo.com/v1/forecast?latitude=44.59&longitude=-75.16&current=temperature_2m&temperature_unit=fahrenheit&timezone=America%2FNew_York
+
+        String path = "https://api.open-meteo.com/v1/forecast?latitude=" +
+                      z.getLat() + "&longitude=" + -z.getLng() +
+                      "&current=temperature_2m&temperature_unit=fahrenheit&timezone=America%2FNew_York";
+
+        Scanner s = Util.openSite(path);
+        String data = s.nextLine();
+        //System.out.println(data);  // DEBUGGING AND TESTING
+
+        // Extract the temperature value from data
+        int start = data.indexOf("\"current\":");
+        int end = data.indexOf('}', start);
+        String blob = data.substring(start,end);
+        start = blob.lastIndexOf(':');
+        String temp = blob.substring(start+1);
+
+        // TODO Extract the precipitation data
+        // create a Current WeatherData object with
+        // temp and precip data.
+
+        return Double.parseDouble(temp);
     }
 } // ZipcodeDB
