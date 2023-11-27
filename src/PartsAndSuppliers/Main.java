@@ -10,6 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Suppliers suppliers = new Suppliers();
+        System.out.println(suppliers.findBySno(1));
+
         Parts parts = new Parts();
         System.out.println(parts);  // DEBUG
 
