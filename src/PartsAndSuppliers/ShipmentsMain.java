@@ -8,5 +8,9 @@ public class ShipmentsMain {
         Shipments shipments = new Shipments(parts, suppliers);
         //System.out.println(shipments);
         shipments.printReport();
+
+        shipments.sortByWeight();
+        System.out.println("--------------------------");
+        shipments.printReport();
     }
 }

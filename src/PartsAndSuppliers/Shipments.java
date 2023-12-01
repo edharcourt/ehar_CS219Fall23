@@ -11,6 +11,22 @@ public class Shipments implements ShipmentsInterface {
     private Parts parts;
     private Suppliers suppliers;
 
+    public Shipments() {
+        this.parts = new Parts();
+        this.suppliers = new Suppliers();
+        /*
+            Study Question
+
+            1) Finish the constructor not by copying and pasting
+            the code to load shipments.csv
+
+            2) Convert the loading of shipments.csv into
+            a private method called loadShipments
+
+            3) Then call loadShipments from both constructors
+         */
+    }
+
     public Shipments(Parts parts, Suppliers suppliers) {
         this.parts = parts;
         this.suppliers = suppliers;
@@ -68,5 +84,20 @@ public class Shipments implements ShipmentsInterface {
             System.out.printf("%10s | %4d | %10s | %4d | %4d\n",
                               sname, sno, pname, pno, qty);
         }
+    }
+
+    @Override
+    public ArrayList<Supplier> findSuppliers(String pname) {
+        ArrayList<Supplier> rv = new ArrayList<>();
+
+        for(Shipment s: this.shipments)
+            if (pname.equals(s.getPart().getName()))
+                rv.add(s.getSupplier());
+
+        return rv;
+    }
+
+    public void sortByWeight() {
+        this.shipments.sort(new ShipmentWeightComparator());
     }
 }  // Shipments class
