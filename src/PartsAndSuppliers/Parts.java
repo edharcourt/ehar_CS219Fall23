@@ -102,6 +102,11 @@ public class Parts implements PartsInterface {
         return null;
     }
 
+    @Override
+    public Part updatePrice(int pno, double newPrice) {
+        return null;
+    }
+
     public Part remove(int pno) {
         Part p = findByPno(pno);
         if (p == null)

@@ -20,4 +20,13 @@ public interface PartsInterface {
     * @return
     */
    ArrayList<Part> orderByWeight();
+
+   /**
+    * Given a part number and a new price update the price of the part to the new price.
+    * Return the new Part, null if the part number did not exist.
+    * @param pno
+    * @param newPrice
+    * @return
+    */
+   Part updatePrice(int pno, double newPrice);
 }
