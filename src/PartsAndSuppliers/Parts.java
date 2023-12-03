@@ -97,6 +97,11 @@ public class Parts implements PartsInterface {
             return parts.remove(i);
     }  // delete
 
+    @Override
+    public ArrayList<Part> orderByWeight() {
+        return null;
+    }
+
     public Part remove(int pno) {
         Part p = findByPno(pno);
         if (p == null)

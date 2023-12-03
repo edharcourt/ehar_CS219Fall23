@@ -12,4 +12,13 @@ public interface ShipmentsInterface {
 
     // sort the shipments by shipment weight
     void sortByWeight();
+
+    /**
+     * Find the shipments coming from a supplier who's status is
+     * greater than or equal to N.
+     *
+     * @param status
+     * @return An array list of shipment
+     */
+    ArrayList<Shipment> findShipmentsByStatus(int status);
 }

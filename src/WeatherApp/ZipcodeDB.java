@@ -63,4 +63,9 @@ public class ZipcodeDB implements ZipcodeDBInterface,
 
         return Double.parseDouble(temp);
     }
+
+    @Override
+    public CurrentWeatherData getCurrentWeather(Zipcode z) {
+        return null;
+    }
 } // ZipcodeDB

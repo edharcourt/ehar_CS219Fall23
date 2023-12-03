@@ -100,4 +100,9 @@ public class Shipments implements ShipmentsInterface {
     public void sortByWeight() {
         this.shipments.sort(new ShipmentWeightComparator());
     }
+
+    @Override
+    public ArrayList<Shipment> findShipmentsByStatus(int status) {
+        return null;
+    }
 }  // Shipments class
