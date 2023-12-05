@@ -15,7 +15,7 @@ public interface ShipmentsInterface {
 
     /**
      * Find the shipments coming from a supplier who's status is
-     * greater than or equal to N.
+     * greater than or equal to status.
      *
      * @param status
      * @return An array list of shipment
