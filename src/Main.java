@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String name = "Hopper,Grace";
+        System.out.println(Math.floorMod(-25,15));
+        System.out.println(-25 % 15);
         //Scanner s = new Scanner(System.in);
         //int x = s.nextInt();
         //String c_or_f = s.nextLine();

@@ -44,6 +44,22 @@ public class Util {
         return c;
     }  // getDouble
 
+    public static int getInt() {
+        Scanner in = new Scanner(System.in);
+
+        int rv = 0;
+        while (true){
+            System.out.print("Enter int 0 - 10: ");
+
+            if (in.hasNextInt()) {
+                rv = in.nextInt();
+                if (0 <= rv && rv <= 10)
+                    return rv;
+            } else
+                System.out.print("Error: sEnter a valid integer between 0 and 10 inclusive");
+        } // while
+    }  // getDouble
+
     /**
      *
      * @param path - Uniform Resource Locator
